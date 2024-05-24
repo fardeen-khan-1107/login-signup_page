@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    welcome to presidency university
+    welcome to presidency
 </body>
 </html>
