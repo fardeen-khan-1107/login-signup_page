@@ -17,7 +17,7 @@
         <div class="navbar-login">
             <a class="btn-singup" type="submit" href="signup.php">signup</a>
             <a class="btn-login" type="submit" href="login.php">Login</a>
-            <a class="btn-logout" type="submit" href="logout.php">Logout</a>
+            <!-- <a class="btn-logout" type="submit" href="logout.php">Logout</a> -->
         </div>
     </header>
     <section class="title">
