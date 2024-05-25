@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    welcome to presidency
+    <p>welcome to presidency</p>
+    <a class="btn-logout" type="submit" href="logout.php">Logout</a>
 </body>
 </html>
