@@ -7,6 +7,7 @@ body{
     background:url(img1.jpg) no-repeat;
     background-size: cover;
 }
+/* index page code */
 .section{
     width: 100%;
     display: flex;
@@ -44,6 +45,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* signup page code */
 #form{
     width: 300px;
     display: flex;
@@ -87,6 +89,8 @@ body{
     border-radius: 20px;
     padding: 7px 10px;
 }
+
+/* login page code */
 .login{
     display: flex;
     justify-content: center;
@@ -94,6 +98,8 @@ body{
     font-family:Poppins;
     margin: 10px 0px;
 }
+
+/* welcome page code */
 .btn-logout{
     position: absolute;
     top: 18px;

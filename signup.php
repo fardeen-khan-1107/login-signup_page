@@ -11,51 +11,45 @@ if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($conn, $username);
     $email = mysqli_real_escape_string($conn, $email);
 
+    // condition used to check either user exist are not
     $sql = "SELECT * FROM users WHERE username='$username'";
     $result = mysqli_query($conn, $sql);
     $count_user = mysqli_num_rows($result);
 
+    //check if same email is present are not
     $sql = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
     $count_email = mysqli_num_rows($result);
 
     if ($count_user == 0 && $count_email == 0) {
         if ($password == $re_password) {
-            // Hash the password
             $hash = password_hash($password, PASSWORD_DEFAULT);
-
             // Insert the new user
-            $sql = "INSERT INTO users(username, email, password) VALUES('$username', '$email', '$hash')";
+            $sql = "insert into users(username, email, password) value('$username', '$email', '$hash')";
             $return = mysqli_query($conn, $sql);
 
             if ($return) {
                 // Successful registration
                 header("Location: welcome.php");
-                exit(); // Ensure script termination after redirection
+                exit();
             } else {
-                // Error during insert
                 echo '<script>
                     alert("There was an error registering your account. Please try again.");
                     window.location.href="signup.php";
                     </script>';
             }
         } else {
-            // Passwords do not match
             echo '<script>
                 alert("Passwords do not match!");
                 window.location.href="signup.php";
                 </script>';
         }
     } else {
-        // Username or email already exists
         echo '<script>
             alert("Username or email already exists!");
             window.location.href="signup.php";
             </script>';
     }
-
-    // Close the database connection
-    mysqli_close($conn);
 }
 ?>
 
@@ -71,6 +65,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- signup page -->
     <section id="form">
         <h2>Signup Form</h2>
         <form name="form" action="signup.php" method="POST" class="signup">

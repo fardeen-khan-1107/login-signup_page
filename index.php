@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- index page -->
     <header class="section">
         <div class="navbar-img">
          <img src="img2.png" alt="img2">

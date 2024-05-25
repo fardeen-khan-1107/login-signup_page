@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- welcome page -->
     <section class="welcome_page">
     <a class="btn-logout" type="submit" href="logout.php">Logout</a>
     <div class="intro">

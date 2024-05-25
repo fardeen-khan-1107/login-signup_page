@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
     <title>Login</title>
 </head>
 <body>
+    <!-- login page -->
     <section id="form">
         <h2>Login</h2>
         <form name="form" action="login.php" method="POST">
